@@ -12,6 +12,33 @@
         body {
             background-color: #f8cc8f;
         }
+
+        .contato {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .contato:hover {
+            background-color: darkgreen;
+        }
+
+        .whats {
+        width: 15%;
+        margin-left: 1rem;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+
+        }
     </style>
 </head>
 
@@ -67,6 +94,7 @@
 
             while ($animal = $resultado->fetch(PDO::FETCH_ASSOC)) {
                 ?>
+
                 <div class="card">
                     <img src="<?php echo $animal['imagem']; ?>" alt="<?php echo $animal['nome']; ?>">
                     <h3>
@@ -84,9 +112,9 @@
                     <p>Descrição:
                         <?php echo $animal['descricao']; ?>
                     </p>
-                    <p>Contato:
-                        <?php echo $animal['contato']; ?>
-                    </p>
+                    <a href="https://api.whatsapp.com/send?phone=<?php echo $animal['contato']; ?>">
+                        <button class="contato">Contato <img src="img/logos_whatsapp-icon.svg" class="whats"> </button>
+                    </a>
                 </div>
                 <?php
             }
