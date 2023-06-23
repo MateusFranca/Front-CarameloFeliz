@@ -28,7 +28,7 @@ if ($result->num_rows == 1) {
   if (password_verify($senha, $hashed_password)) {
     // Senha correta, redirecionar para a página de sucesso
     $_SESSION['usuario'] = $row['nome'];
-    header("Location: index.html");
+    header("Location: adote.php");
     exit();
   } else {
     // Senha incorreta

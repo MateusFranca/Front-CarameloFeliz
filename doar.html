@@ -11,12 +11,12 @@
   <header>
     <nav>
       <ul>
-        <li>
-          <img class="logo-header" src="img/logo_branca.png" alt="Logo" />
+        <li class="select">
+          <img class="logo-header" src="img/logo_branca.png" alt="Logo">
         </li>
         <li><a href="adote.php">Adote</a></li>
-        <li class="select"><a href="doar.html">Doar</a></li>
-        <li><a href="meusanimais.html">Meus animais</a></li>
+        <li class="select"><a href="#">Doar</a></li>
+        <li><a href="meus_animais.php">Meus animais</a></li>
       </ul>
     </nav>
   </header>
@@ -25,7 +25,7 @@
     <h1>Tela de Cadastro de Animal</h1>
 
     <div class="form-container">
-      <form>
+      <form method="post" action="salvar_cadastro_animal.php">
         <div class="form-group">
           <label for="animal-name">Nome do animal:</label>
           <input type="text" id="animal-name" name="animal-name" required />
@@ -37,13 +37,13 @@
         </div>
 
         <div class="form-group">
+          <label for="animal-sex">Sexo:</label>
+          <input type="text" id="animal-sex" name="animal-sex" required />
+        </div>
+
+        <div class="form-group">
           <label for="animal-contact">Contato:</label>
-          <input
-            type="text"
-            id="animal-contact"
-            name="animal-contact"
-            required
-          />
+          <input type="text" id="animal-contact" name="animal-contact" required />
         </div>
 
         <div class="form-group">
@@ -57,22 +57,12 @@
 
         <div class="form-group">
           <label for="animal-description">Descrição:</label>
-          <textarea
-            id="animal-description"
-            name="animal-description"
-            required
-          ></textarea>
+          <textarea id="animal-description" name="animal-description" required></textarea>
         </div>
 
         <div class="form-group">
           <label for="animal-image">Imagem:</label>
-          <input
-            type="file"
-            id="animal-image"
-            name="animal-image"
-            accept="image/*"
-            required
-          />
+          <input type="file" id="animal-image" name="animal-image" accept="image/*" required />
         </div>
 
         <div class="form-group">

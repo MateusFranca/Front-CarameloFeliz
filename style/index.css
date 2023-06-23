@@ -1,151 +1,151 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .select a {
-    color: #f8ee8f;
+  color: #f8ee8f;
 }
 
 header {
-    background-color: #52A8D9;
-    padding: 20px;
-    color: white;
+  background-color: #52a8d9;
+  padding: 20px;
+  color: white;
 }
 
-.logo-header{
-    max-width: 150px;
+.logo-header {
+  max-width: 150px;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 nav li {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 nav button {
-    background-color: #F8CC8F;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 4px;
+  background-color: #f8cc8f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
 }
 
 nav button:hover {
-    background-color: #ffe2b9;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #ffe2b9;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #container1 {
-    background-color: #fff;
-    padding: 40px;
+  background-color: #fff;
+  padding: 40px;
 }
 
 #container2 {
-    background-color: #f9f9f9;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #container2 select {
-    padding: 8px;
+  padding: 8px;
 }
 
 #container2 input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 #container3 {
-    background-color: #F8CC8F;
-    padding: 40px;
+  background-color: #f8cc8f;
+  padding: 40px;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
 }
 
 .card {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 20px;
-    margin: 10px;
-    width: calc(22% - 20px);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 10px;
+  width: calc(22% - 20px);
 }
 
-
 .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .card h3 {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .card p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
+
 
 /* Estilos específicos para dispositivos móveis */
 @media only screen and (max-width: 600px) {
-    header {
-        padding: 10px;
-    }
+  header {
+    padding: 10px;
+  }
 
-    nav li {
-        margin-right: 10px;
-    }
+  nav li {
+    margin-right: 10px;
+  }
 
-    nav button {
-        font-size: 12px;
-    }
+  nav button {
+    font-size: 12px;
+  }
 
-    #container1 {
-        padding: 20px;
-    }
+  #container1 {
+    padding: 20px;
+  }
 
-    #container2 {
-        padding: 10px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  #container2 {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    #container2 select {
-        margin-bottom: 10px;
-    }
+  #container2 select {
+    margin-bottom: 10px;
+  }
 
-    #container2 input[type="text"] {
-        width: 100%;
-    }
+  #container2 input[type="text"] {
+    width: 100%;
+  }
 
-    #container3 .card {
-        width: calc(50% - 20px);
-    }
+  #container3 .card {
+    width: calc(50% - 20px);
+  }
 }

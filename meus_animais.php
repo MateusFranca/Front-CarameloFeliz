@@ -9,9 +9,46 @@
     <style>
         @media only screen and (max-width: 600px) {}
 
-        body {
-            background-color: #f8cc8f;
-        }
+
+        form {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#red-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#red-button:hover {
+    background-color: darkred;
+}
+
+#blue-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+}
+
+#blue-button:hover {
+    background-color: darkblue;
+}
+
+body{
+    background-color: #f8cc8f;
+}
     </style>
 </head>
 
@@ -19,42 +56,15 @@
     <header>
         <nav>
             <ul>
-                <li class="select">
-                    <img class="logo-header" src="img/logo_branca.png" alt="Logo">
-                </li>
-                <li class="select"><a href="#">Adote</a></li>
-                <li><a href="doar.html">Doar</a></li>
-                <li><a href="meus_animais.php">Meus animais</a></li>
                 <li>
-                    <a href="login.html"><button>Login</button></a>
+                    <img class="logo-header" src="img/logo_branca.png" alt="Logo" />
                 </li>
+                <li><a href="adote.php">Adote</a></li>
+                <li><a href="doar.html">Doar</a></li>
+                <li class="select"><a href="meus_animais.php">Meus animais</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="container1">
-        <h2>
-            Todo animal de estimação merece um lar amoroso. Adote um animal de
-            estimação hoje
-        </h2>
-        <p>
-            Navegue pelos nossos animais disponíveis e saiba mais sobre o processo
-            de adoção.<br />
-            Juntos, podemos resgatar, reabilitar e realojar animais de estimação
-            necessitados. Obrigado por apoiar nossa missão de levar alegria às
-            famílias por meio da adoção de animais de estimação.
-        </p>
-    </section>
-
-    <section id="container2">
-        <label for="animal-type">Tipo do animal:</label>
-        <select id="animal-type">
-            <option value="cachorro">Cachorro</option>
-            <option value="gato">Gato</option>
-        </select>
-
-        <input type="text" id="search-bar" placeholder="Pesquisar">
-    </section>
 
     <section id="container3">
         <div class="row">
@@ -87,6 +97,14 @@
                     <p>Contato:
                         <?php echo $animal['contato']; ?>
                     </p>
+                    <form method="post" action="editar_animal.php">
+                        <input type="hidden" name="animal_id" value="<?php echo $animal['id']; ?>">
+                        <button type="submit" id="blue-button">Editar</button>
+                    </form>
+                    <form method="post" action="excluir_animal.php">
+                        <input type="hidden" name="animal_id" value="<?php echo $animal['id']; ?>">
+                        <button type="submit" id="red-button">Excluir</button>
+                    </form>
                 </div>
                 <?php
             }

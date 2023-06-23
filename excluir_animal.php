@@ -1,28 +1,19 @@
 <?php
-// Conexão com o banco de dados
-$servername = "localhost";
-$username = "root";
-$password = "23021308";
-$dbname = "carameloFeliz";
+// excluir_animal.php
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $animalId = $_POST['animal_id'];
 
-// Verifique a conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+    // Aqui você precisa conectar ao banco de dados e executar a lógica de exclusão
+    $conexao = new PDO("mysql:host=localhost;dbname=carameloFeliz", "root", "23021308");
+
+    $query = "DELETE FROM animais WHERE id = :animal_id";
+    $statement = $conexao->prepare($query);
+    $statement->bindValue(':animal_id', $animalId);
+    $statement->execute();
+
+    // Redirecionar de volta para a página principal ou qualquer outra página desejada
+    header("Location: meus_animais.php");
+    exit();
 }
-
-// Obtém o ID do card a ser excluído
-$id = $_POST['id'];
-
-// Consulta para excluir o card do banco de dados
-$sql = "DELETE FROM animais WHERE id = $id";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Card excluído com sucesso!";
-} else {
-    echo "Erro ao excluir o card: " . $conn->error;
-}
-
-$conn->close();
 ?>
